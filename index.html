@@ -47,7 +47,7 @@
       position: relative;
       z-index: 2;
       width: 100%;
-      max-width: 860px;
+      max-width: 900px;
       background: rgba(255, 255, 255, 0.08);
       border: 1px solid rgba(255, 255, 255, 0.16);
       border-radius: 30px;
@@ -108,9 +108,34 @@
       letter-spacing: 8px;
     }
 
+    .sayings-title {
+      margin-top: 30px;
+      margin-bottom: 16px;
+      font-size: 1.5rem;
+      color: #ecd7ff;
+    }
+
+    .sayings {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 10px;
+    }
+
+    .saying {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 18px;
+      padding: 18px;
+      text-align: left;
+      line-height: 1.7;
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    }
+
     .btn {
       display: inline-block;
-      margin-top: 12px;
+      margin-top: 24px;
       padding: 15px 30px;
       border: none;
       border-radius: 999px;
@@ -160,8 +185,11 @@
       .card { padding: 36px 22px; border-radius: 24px; }
       .cat { font-size: 60px; }
       h1 { font-size: 2.2rem; }
-      .subtitle, .message, .cute-box p, .surprise-message { font-size: 1rem; }
+      .subtitle, .message, .cute-box p, .surprise-message, .saying { font-size: 1rem; }
       .icons-row { font-size: 1.4rem; letter-spacing: 5px; }
+      .sayings {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -201,10 +229,23 @@
       <div class="icons-row">🐾 🖤 🤍 💜 🐾</div>
     </div>
 
+    <h2 class="sayings-title">Cute things for Ashley ✨</h2>
+
+    <div class="sayings">
+      <div class="saying">Ashley, you make the world feel softer, sweeter, and a little more magical just by being in it. 💜</div>
+      <div class="saying">You are as comforting as a sleepy little cat curled up in the warmest spot in the room. 🐱</div>
+      <div class="saying">Your smile has the kind of sparkle that can turn an ordinary day into something special. ✨</div>
+      <div class="saying">If cuteness had a queen, it would absolutely be you, Ashley. 👑</div>
+      <div class="saying">You deserve gentle days, happy moments, and more love than a thousand tiny paws could carry. 🐾</div>
+      <div class="saying">Everything about you feels warm, lovely, and worth smiling about. 🤍</div>
+      <div class="saying">You have the kind of sweetness that stays in people’s hearts. 💕</div>
+      <div class="saying">Ashley, you are beautiful in the softest, cutest, most unforgettable way. 💜</div>
+    </div>
+
     <button class="btn" onclick="showSurprise()">Click for a Cute Surprise</button>
 
     <div class="surprise-message" id="surpriseMessage">
-      Ashley, you are paws-itively adorable and amazing 💜🐾
+      Ashley, you are paws-itively adorable, super special, and deserve all the cuddles, smiles, and pretty little moments in the world 💜🐾
     </div>
 
     <div class="footer-note">
