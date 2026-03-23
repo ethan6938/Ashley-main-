@@ -5,17 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>For Ashley</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: "Trebuchet MS", "Comic Sans MS", Arial, sans-serif;
       min-height: 100vh;
       background: linear-gradient(135deg, #0d0d0d 0%, #241133 45%, #6b3fa0 100%);
-      color: #ffffff;
+      color: #fff;
       overflow-x: hidden;
       position: relative;
       display: flex;
@@ -103,7 +99,7 @@
     .cute-box p {
       font-size: 1.08rem;
       line-height: 1.9;
-      color: #ffffff;
+      color: #fff;
     }
 
     .icons-row {
@@ -118,7 +114,7 @@
       padding: 15px 30px;
       border: none;
       border-radius: 999px;
-      background: linear-gradient(90deg, #ffffff, #dfc2ff);
+      background: linear-gradient(90deg, #fff, #dfc2ff);
       color: #2c1740;
       font-size: 1rem;
       font-weight: bold;
@@ -155,44 +151,17 @@
     }
 
     @keyframes floatUp {
-      0% {
-        transform: translateY(0) scale(1);
-        opacity: 0;
-      }
-      15% {
-        opacity: 0.12;
-      }
-      100% {
-        transform: translateY(-140px) scale(1.15);
-        opacity: 0;
-      }
+      0% { transform: translateY(0) scale(1); opacity: 0; }
+      15% { opacity: 0.12; }
+      100% { transform: translateY(-140px) scale(1.15); opacity: 0; }
     }
 
     @media (max-width: 768px) {
-      .card {
-        padding: 36px 22px;
-        border-radius: 24px;
-      }
-
-      .cat {
-        font-size: 60px;
-      }
-
-      h1 {
-        font-size: 2.2rem;
-      }
-
-      .subtitle,
-      .message,
-      .cute-box p,
-      .surprise-message {
-        font-size: 1rem;
-      }
-
-      .icons-row {
-        font-size: 1.4rem;
-        letter-spacing: 5px;
-      }
+      .card { padding: 36px 22px; border-radius: 24px; }
+      .cat { font-size: 60px; }
+      h1 { font-size: 2.2rem; }
+      .subtitle, .message, .cute-box p, .surprise-message { font-size: 1rem; }
+      .icons-row { font-size: 1.4rem; letter-spacing: 5px; }
     }
   </style>
 </head>
@@ -245,8 +214,7 @@
 
   <script>
     function showSurprise() {
-      const message = document.getElementById("surpriseMessage");
-      message.style.display = "block";
+      document.getElementById("surpriseMessage").style.display = "block";
     }
   </script>
 </body>
