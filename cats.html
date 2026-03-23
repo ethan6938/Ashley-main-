@@ -9,129 +9,144 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: "Trebuchet MS", "Comic Sans MS", Arial, sans-serif;
     }
 
     body {
-      background: linear-gradient(135deg, #0d0d0d, #2b1839, #6f42c1);
+      font-family: "Trebuchet MS", "Comic Sans MS", Arial, sans-serif;
       min-height: 100vh;
+      background: linear-gradient(135deg, #0d0d0d 0%, #241133 45%, #6b3fa0 100%);
+      color: #ffffff;
       overflow-x: hidden;
-      color: #fff;
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 20px;
-      position: relative;
     }
 
-    .background-hearts,
-    .background-paws {
+    .floating-icons {
       position: absolute;
       inset: 0;
-      pointer-events: none;
       overflow: hidden;
+      pointer-events: none;
     }
 
-    .background-hearts span,
-    .background-paws span {
+    .floating-icons span {
       position: absolute;
-      opacity: 0.12;
-      animation: floatUp 10s linear infinite;
       font-size: 28px;
+      opacity: 0.12;
+      animation: floatUp 12s linear infinite;
     }
 
-    .background-hearts span:nth-child(1) { left: 10%; top: 90%; animation-delay: 0s; }
-    .background-hearts span:nth-child(2) { left: 25%; top: 95%; animation-delay: 2s; }
-    .background-hearts span:nth-child(3) { left: 50%; top: 92%; animation-delay: 4s; }
-    .background-hearts span:nth-child(4) { left: 75%; top: 96%; animation-delay: 1s; }
-    .background-hearts span:nth-child(5) { left: 88%; top: 91%; animation-delay: 3s; }
-
-    .background-paws span:nth-child(1) { left: 15%; top: 20%; animation-delay: 1s; }
-    .background-paws span:nth-child(2) { left: 80%; top: 25%; animation-delay: 3s; }
-    .background-paws span:nth-child(3) { left: 20%; top: 70%; animation-delay: 5s; }
-    .background-paws span:nth-child(4) { left: 70%; top: 75%; animation-delay: 2s; }
+    .floating-icons span:nth-child(1) { left: 8%; top: 92%; animation-delay: 0s; }
+    .floating-icons span:nth-child(2) { left: 18%; top: 80%; animation-delay: 2s; }
+    .floating-icons span:nth-child(3) { left: 30%; top: 95%; animation-delay: 4s; }
+    .floating-icons span:nth-child(4) { left: 42%; top: 85%; animation-delay: 1s; }
+    .floating-icons span:nth-child(5) { left: 55%; top: 94%; animation-delay: 3s; }
+    .floating-icons span:nth-child(6) { left: 68%; top: 82%; animation-delay: 5s; }
+    .floating-icons span:nth-child(7) { left: 80%; top: 96%; animation-delay: 2.5s; }
+    .floating-icons span:nth-child(8) { left: 90%; top: 84%; animation-delay: 4.5s; }
 
     .card {
       position: relative;
       z-index: 2;
-      max-width: 850px;
       width: 100%;
-      background: rgba(255, 255, 255, 0.10);
-      border: 2px solid rgba(255, 255, 255, 0.18);
+      max-width: 860px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.16);
       border-radius: 30px;
-      padding: 50px 30px;
+      padding: 50px 32px;
       text-align: center;
       backdrop-filter: blur(10px);
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
     }
 
     .cat {
-      font-size: 80px;
-      margin-bottom: 15px;
-      animation: bounce 2.5s infinite;
+      font-size: 78px;
+      margin-bottom: 14px;
+      animation: bounce 2.4s ease-in-out infinite;
     }
 
     h1 {
-      font-size: 3.2rem;
-      margin-bottom: 15px;
-      color: #ffffff;
+      font-size: 3.1rem;
+      margin-bottom: 10px;
+      line-height: 1.1;
     }
 
     h1 span {
-      color: #d9b3ff;
-      text-shadow: 0 0 12px rgba(217, 179, 255, 0.4);
+      color: #dab6ff;
+      text-shadow: 0 0 12px rgba(218, 182, 255, 0.35);
     }
 
     .subtitle {
-      font-size: 1.2rem;
-      color: #f7eefe;
-      margin-bottom: 25px;
+      font-size: 1.15rem;
+      color: #f4ecff;
+      margin-bottom: 26px;
     }
 
-    p {
+    .message {
       font-size: 1.1rem;
       line-height: 1.9;
-      color: #f3f3f3;
+      color: #f6f2fb;
       margin-bottom: 18px;
     }
 
     .cute-box {
       margin: 28px 0;
+      padding: 24px 20px;
       background: rgba(0, 0, 0, 0.28);
       border: 2px dashed rgba(216, 180, 254, 0.7);
-      border-radius: 20px;
-      padding: 22px;
+      border-radius: 22px;
     }
 
-    .sparkles {
+    .cute-box p {
+      font-size: 1.08rem;
+      line-height: 1.9;
+      color: #ffffff;
+    }
+
+    .icons-row {
+      margin-top: 16px;
       font-size: 1.8rem;
       letter-spacing: 8px;
-      margin-top: 10px;
     }
 
-    button {
-      margin-top: 25px;
-      padding: 14px 30px;
+    .btn {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 15px 30px;
       border: none;
       border-radius: 999px;
-      background: linear-gradient(90deg, #ffffff, #d8b4fe);
-      color: #2b1839;
+      background: linear-gradient(90deg, #ffffff, #dfc2ff);
+      color: #2c1740;
       font-size: 1rem;
       font-weight: bold;
       cursor: pointer;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.28);
       transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
-    button:hover {
+    .btn:hover {
       transform: translateY(-3px) scale(1.04);
-      box-shadow: 0 14px 24px rgba(0,0,0,0.35);
+      box-shadow: 0 16px 28px rgba(0, 0, 0, 0.36);
+    }
+
+    .surprise-message {
+      margin-top: 22px;
+      padding: 16px 18px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      font-size: 1rem;
+      line-height: 1.7;
+      display: none;
     }
 
     .footer-note {
-      margin-top: 22px;
-      font-size: 0.95rem;
-      color: #eadcff;
+      margin-top: 24px;
+      font-size: 0.96rem;
+      color: #ecdfff;
     }
 
     @keyframes bounce {
@@ -144,34 +159,37 @@
         transform: translateY(0) scale(1);
         opacity: 0;
       }
-      20% {
+      15% {
         opacity: 0.12;
       }
       100% {
-        transform: translateY(-120px) scale(1.2);
+        transform: translateY(-140px) scale(1.15);
         opacity: 0;
       }
     }
 
     @media (max-width: 768px) {
       .card {
-        padding: 35px 20px;
-      }
-
-      h1 {
-        font-size: 2.3rem;
-      }
-
-      .subtitle,
-      p {
-        font-size: 1rem;
+        padding: 36px 22px;
+        border-radius: 24px;
       }
 
       .cat {
         font-size: 60px;
       }
 
-      .sparkles {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .subtitle,
+      .message,
+      .cute-box p,
+      .surprise-message {
+        font-size: 1rem;
+      }
+
+      .icons-row {
         font-size: 1.4rem;
         letter-spacing: 5px;
       }
@@ -179,19 +197,15 @@
   </style>
 </head>
 <body>
-  <div class="background-hearts">
+  <div class="floating-icons">
+    <span>🐾</span>
     <span>💜</span>
+    <span>🐱</span>
     <span>🤍</span>
     <span>🖤</span>
+    <span>🐾</span>
     <span>💜</span>
-    <span>🤍</span>
-  </div>
-
-  <div class="background-paws">
-    <span>🐾</span>
-    <span>🐾</span>
-    <span>🐾</span>
-    <span>🐾</span>
+    <span>🐈‍⬛</span>
   </div>
 
   <div class="card">
@@ -199,26 +213,30 @@
     <h1>For <span>Ashley</span> 💜</h1>
     <div class="subtitle">A cute little page made just for you</div>
 
-    <p>
-      Ashley, this was made to be as sweet and adorable as possible,
-      because you deserve something special.
+    <p class="message">
+      Ashley, this page was made to be sweet, soft, and adorable —
+      just a little something special for someone special.
     </p>
 
-    <p>
+    <p class="message">
       Since you love cats and your favorite colors are black, white, and purple,
-      this page is filled with soft little touches that feel cute, cozy, and magical.
+      everything here was made to match that cozy, cute, magical vibe.
     </p>
 
     <div class="cute-box">
       <p>
         You are lovely, amazing, and one of a kind.
-        May your days be filled with happiness, smiles, soft cat cuddles,
+        May your days be filled with smiles, happiness, soft cat cuddles,
         and all the little beautiful things that make life feel extra special. ✨
       </p>
-      <div class="sparkles">🐾 🖤 🤍 💜 🐾</div>
+      <div class="icons-row">🐾 🖤 🤍 💜 🐾</div>
     </div>
 
-    <button onclick="showMessage()">Click for a Cute Surprise</button>
+    <button class="btn" onclick="showSurprise()">Click for a Cute Surprise</button>
+
+    <div class="surprise-message" id="surpriseMessage">
+      Ashley, you are paws-itively adorable and amazing 💜🐾
+    </div>
 
     <div class="footer-note">
       Made with lots of sweetness for Ashley 🐱
@@ -226,8 +244,9 @@
   </div>
 
   <script>
-    function showMessage() {
-      alert("Ashley, you are paws-itively adorable and amazing 💜🐾");
+    function showSurprise() {
+      const message = document.getElementById("surpriseMessage");
+      message.style.display = "block";
     }
   </script>
 </body>
